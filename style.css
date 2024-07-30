@@ -1,0 +1,252 @@
+@import url();
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 96px;
+  font-size: 21px;
+  background: #111111;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+
+section.card {
+  background: #cbcccb;
+  background: -webkit-linear-gradient(to right, #a0a39f, #004617); 
+  background: linear-gradient(to right, #a0a39f, #004617);
+  border-radius: 24px 24px 24px 48px;
+  padding: 48px 48px 48px 308px;
+  margin: 84px 0;
+  min-width: 640px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;  
+  box-shadow: 5px 0 0 0 rgba(204,204,204,0.3), -5px 0 0 0 rgba(204,204,204,0.3), 0 5px 0 0 rgba(204,204,204,0.3);
+}
+section.card .text-content {
+  display: flex;
+  flex-direction: column;
+  width:calc(60vw - 192px);
+}
+section.card .text-content h3 {
+  margin: 0;
+  font-size: 1.5em;
+  max-width: 20ch;
+  color: #fff;
+}
+section.card .text-content p {
+  margin: 25px 0 24px;
+  color: #fff;
+}
+section.card .text-content a {
+  border: 3px solid #f2f2f2;
+  color: #ffffff;
+  align-self: flex-start;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  transition: 400ms all;
+}
+section.card .text-content a:hover {
+  background: #a0a39f;
+  color: white;
+}
+section.card .visual {
+  width: 240px;
+  height: 50%;
+  position: static;
+  top: 6%;
+  left: 24px;
+  border-radius: 50px;
+  border-radius: 24px 24px 24px 48px;
+  
+}
+section.card .visual img {
+  height: 150%;
+  margin-top: 30%;
+  margin-left: -315%;
+    border-radius: 150%;
+    width: 250px;
+    height: 250px;
+	border:5px solid white;
+  flex-direction: row;
+  align-self: flex-start; 
+}
+article {
+  margin: auto;
+  display: block;
+  width:calc(60vw + 248px);
+  max-width:calc(920px + 248px);
+  min-width:calc(640px + 248px); 
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50px;
+  border-radius: 24px 24px 24px 48px;
+}
+
+.sticky{
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content{
+  padding-top: 60px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  color: #ca1818;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links>li>a:hover {
+  color: #004617;
+  transition: all .3s ease-in-out;
+}
+
+.brand{
+  display: flex;
+  flex-direction: row;
+  text-transform: capitalize;
+}
+
+.firstname{
+  color: #f2f2f2;
+  font-weight: 700;
+}
+
+.lastname{
+  color: #ca1818;
+  font-weight: 400;
+  padding-left: 4px;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  body {
+    padding: 96px 48px 24px;
+  }
+  article {
+    width: 100%;
+    min-width: 100%;
+  }
+  section.card {
+    min-width: 100%;
+  }
+  section.card .text-content {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 110%;
+  bottom: 0;
+}
+
+@media all and (max-width: 720px) {
+  body {
+    padding: 48px 24px 0;
+  }
+  section.card {
+    margin: 64px 0;
+    padding: 88px 36px 36px;
+    flex-direction: column;
+    border-radius: 24px;
+  }
+  section.card .text-content h3 {
+    max-width:calc(100% - 150px);
+    font-size: 1em;
+  }
+  section.card .text-content p,
+  section.card .text-content a {
+    font-size: 0.8em;
+  }
+  section.card .visual {
+    width: 150px;
+    height: 150px;
+    right: 16px;
+    left: auto;
+    border-radius: 50%;
+  }
+  section.card .visual img{
+    width: 100%;
+    height: auto;
+    }
+}
